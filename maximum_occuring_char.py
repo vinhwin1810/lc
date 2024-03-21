@@ -11,3 +11,5 @@ def maximumOccuringCharacter(text):
 
     for char, val in counter.items():
         if val == maxVal:
+            return char
+
