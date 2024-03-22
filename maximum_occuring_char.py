@@ -13,3 +13,6 @@ def maximumOccuringCharacter(text):
         if val == maxVal:
             return char
 
+text = "bbbaaacc"
+
+print(maximumOccuringCharacter(text))
