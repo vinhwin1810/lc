@@ -14,4 +14,4 @@ def solution(numbers):
             
             window = window[1:]
     
-    return re
+    return ress
