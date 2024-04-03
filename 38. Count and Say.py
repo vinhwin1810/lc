@@ -22,4 +22,4 @@ class Solution:
         res += str(len(sub))
         res+= sub[-1]
 
-        return re
+        return res
