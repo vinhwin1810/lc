@@ -1,42 +1,46 @@
-# Let's implement the decode function and apply it to the uploaded input file
-
-def decode(message_file_path):
-    # Read the content of the file
-    with open(message_file_path, 'r') as file:
+def decode_with_triangular_pattern(message_file):
+    # Read the file and store the number-word pairs
+    with open(message_file, 'r') as file:
         lines = file.readlines()
+        pairs = [line.strip().split() for line in lines]
+        pairs = [(int(num), word) for num, word in pairs]
 
-    # Split the content into a list of tuples (number, word)
-    number_word_pairs = [line.strip().split(' ') for line in lines]
-    number_word_pairs = [(int(number), word) for number, word in number_word_pairs]
+    # Sort the pairs based on the numbers
+    pairs.sort(key=lambda x: x[0])
 
-    # Sort the list by the number (first item in the tuples)
-    number_word_pairs.sort(key=lambda pair: pair[0])
+    # Initialize variables for tracking the current line and the triangular number
+    message_words = []
+    triangular_number = 1
+    line_number = 1
 
-    # Initialize the pyramid
-    pyramid = []
-    current_line = []
-    expected_number = 1
+    # Iterate through the sorted pairs to find the words at the end of each pyramid line
+    for num, word in pairs:
+        if num == triangular_number:
+            message_words.append(word)
+            line_number += 1
+            triangular_number = line_number * (line_number + 1) // 2  # Calculating the next triangular number
 
-    # Decode the message
-    decoded_words = []
+    # Concatenate the message words to form the decoded message
+    return ' '.join(message_words)
 
-    for number, word in number_word_pairs:
-        # Add the number to the current line
-        current_line.append(number)
+print(decode_with_triangular_pattern('C:/Users/Vinh/Desktop/lc/coding_qual_input.txt'))
 
-        # Check if the number is at the end of the current line of the pyramid
-        if number == expected_number:
-            # If it is, add the corresponding word to the decoded message
-            decoded_words.append(word)
-            # And reset the current line for the next level of the pyramid
-            current_line = []
-            # Increment the expected number at the end of the next pyramid line
-            expected_number += len(pyramid) + 2
+# Function to generate the pyramid numbers up to the triangular number 21
+def generate_pyramid_numbers(upper_limit):
+    pyramid_numbers = []
+    current_line = 1
+    number = 1
+    while number <= upper_limit:
+        line_numbers = []
+        for _ in range(current_line):
+            if number > upper_limit:
+                break
+            line_numbers.append(number)
+            number += 1
+        pyramid_numbers.append(line_numbers)
+        current_line += 1
+    return pyramid_numbers
 
-    # Join the decoded words into a single string
-    return ' '.join(decoded_words)
-
-# Use the provided input file
-input_file_path = '/mnt/data/coding_qual_input.txt'
-decoded_message = decode(input_file_path)
-decoded_message
+# Generating the pyramid numbers up to 21
+pyramid_numbers = generate_pyramid_numbers(400)
+print(pyramid_numbers)
