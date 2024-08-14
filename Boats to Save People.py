@@ -13,3 +13,15 @@ class Solution:
             boats += 1  # Increment the number of boats
 
         return boats
+
+
+
+        <div>
+          <label className="text-sm font-semibold mb-1 block">Stage Type</label>
+          <div className="flex justify-around items-center border rounded-lg p-2 shadow">
+            <div className="focus:outline-none border mr-20 text-sm rounded-lg bg-gray-200 shadow">
+              <h1>Phone Screen</h1>
+            </div>
+            <IoMdArrowDropdown size={24} className="text-gray-400 ml-2" />
+          </div>
+        </div>
