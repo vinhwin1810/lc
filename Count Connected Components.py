@@ -21,7 +21,7 @@ class Solution:
             if c not in visit:
                 count +=1
                 dfs(c)
-        
+        #return count
         return count
 
             
