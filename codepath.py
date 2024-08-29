@@ -81,24 +81,25 @@ def compareStrings(s1, s2):
     print(stack2)
     return 1 if stack1 == stack2 else 0
 
+
 def playSegments(coins):
-    l, r = 0, len(coins) - 1
-    first = 0
-    second = 0
+    n = len(coins)
+    player1_score = 0
+    total_score = sum(coins)  # Total score of all coins
     
-    while l <= r:
-        if coins[l] == 1: 
-            first += 1
+    for i in range(n):
+        # Player 1's turn
+        if coins[i] == 1:
+            player1_score += 1
         else:
-            first -= 1
-        l += 1
+            player1_score -= 1
         
-        if l <= r:
-            if coins[r] == 1:
-                second += 1
-            else:
-                second -= 1
-            r -= 1
+        # Calculate remaining score for Player 2
+        remaining_score = total_score - player1_score
+        
+        # Check if Player 1's score is greater than remaining score for Player 2
+        if player1_score > remaining_score:
+            return i + 1  # Return the number of segments Player 1 played
     
-    return first, second
-            
+    # If we've gone through all segments, Player 1 needs to play all of them
+    return n
