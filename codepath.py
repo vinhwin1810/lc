@@ -90,7 +90,7 @@ import random
 import re
 import sys
 
-
+k dua dau
 #
 # Complete the 'playSegments' function below.
 #
