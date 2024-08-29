@@ -82,24 +82,52 @@ def compareStrings(s1, s2):
     return 1 if stack1 == stack2 else 0
 
 
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+#
+# Complete the 'playSegments' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts INTEGER_ARRAY coins as parameter.
+#
+
 def playSegments(coins):
-    n = len(coins)
-    player1_score = 0
-    total_score = sum(coins)  # Total score of all coins
+    max_score = 0
+    for i in coins:
+        max_score += 1 if i == 1 else -1
     
-    for i in range(n):
-        # Player 1's turn
-        if coins[i] == 1:
-            player1_score += 1
-        else:
-            player1_score -= 1
-        
-        # Calculate remaining score for Player 2
-        remaining_score = total_score - player1_score
-        
-        # Check if Player 1's score is greater than remaining score for Player 2
-        if player1_score > remaining_score:
-            return i + 1  # Return the number of segments Player 1 played
+    play1_score = 0
     
-    # If we've gone through all segments, Player 1 needs to play all of them
-    return n
+    j = 0
+    while play1_score <= max_score / 2 and j < len(coins):
+        play1_score += 1 if coins[j] == 1 else -1
+        j += 1
+    
+    return j
+        
+            
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    coins_count = int(input().strip())
+
+    coins = []
+
+    for _ in range(coins_count):
+        coins_item = int(input().strip())
+        coins.append(coins_item)
+
+    result = playSegments(coins)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
