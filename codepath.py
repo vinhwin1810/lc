@@ -45,3 +45,60 @@ def maximumOccuringCharacter(text: str) -> str:
             max_char = char
 
     return max_char
+
+def sum_of_left_leaves(root: TreeNode) -> int:
+    def is_leaf(node: TreeNode) -> bool:
+        return node is not None and node.left is None and node.right is None
+
+    def dfs(node: TreeNode) -> int:
+        if node is None:
+            return 0
+        left_sum = dfs(node.left)
+        right_sum = dfs(node.right)
+        return left_sum + right_sum + (node.val if is_leaf(node.left) else 0)
+
+    return dfs(root)
+
+def compareStrings(s1, s2):
+    stack1 = []
+    stack2 = []
+    
+    for char in s1:
+        if char == "#":
+            if stack1:  # Only pop if stack is not empty
+                stack1.pop()
+        else:
+            stack1.append(char)
+    
+    for char in s2:
+        if char == "#":
+            if stack2:  # Only pop if stack is not empty
+                stack2.pop()
+        else:
+            stack2.append(char)
+    
+    print(stack1)
+    print(stack2)
+    return 1 if stack1 == stack2 else 0
+
+def playSegments(coins):
+    l, r = 0, len(coins) - 1
+    first = 0
+    second = 0
+    
+    while l <= r:
+        if coins[l] == 1: 
+            first += 1
+        else:
+            first -= 1
+        l += 1
+        
+        if l <= r:
+            if coins[r] == 1:
+                second += 1
+            else:
+                second -= 1
+            r -= 1
+    
+    return first, second
+            
