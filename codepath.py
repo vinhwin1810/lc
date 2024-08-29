@@ -30,3 +30,18 @@ def deleteEven(listHead: SinglyLinkedListNode) -> SinglyLinkedListNode:
             current = current.next
     
     return dummy.next
+
+def maximumOccuringCharacter(text: str) -> str:
+    char_count = {}
+    max_count = 0
+    max_char = ''
+
+    for char in text:
+        char_count[char] = char_count.get(char, 0) + 1
+        if char_count[char] > max_count:
+            max_count = char_count[char]
+            max_char = char
+        elif char_count[char] == max_count and text.index(char) < text.index(max_char):
+            max_char = char
+
+    return max_char
