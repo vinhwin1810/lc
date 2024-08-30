@@ -14,7 +14,7 @@ def decode_with_triangular_pattern(message_file):
     line_number = 1
 
     # Iterate through the sorted pairs to find the words at the end of each pyramid line
-    for num, word in pairs:
+# Modified by script
         if num == triangular_number:
             message_words.append(word)
             line_number += 1
