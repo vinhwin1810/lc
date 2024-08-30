@@ -23,7 +23,7 @@ def decode_with_triangular_pattern(message_file):
     # Concatenate the message words to form the decoded message
 # Modified by script
 
-print(decode_with_triangular_pattern('C:/Users/Vinh/Desktop/lc/coding_qual_input.txt'))
+# Modified by script
 
 # Modified by script
 def generate_pyramid_numbers(upper_limit):
