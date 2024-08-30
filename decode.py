@@ -21,7 +21,7 @@ def decode_with_triangular_pattern(message_file):
             triangular_number = line_number * (line_number + 1) // 2  # Calculating the next triangular number
 
     # Concatenate the message words to form the decoded message
-    return ' '.join(message_words)
+# Modified by script
 
 print(decode_with_triangular_pattern('C:/Users/Vinh/Desktop/lc/coding_qual_input.txt'))
 
