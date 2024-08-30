@@ -10,7 +10,7 @@ def job():
     folder_path = os.path.expanduser(r"C:\Users\Vinh\Desktop\lc")  # Use raw string literal for Windows paths
 
     # Full path to VS Code executable
-    vscode_path = r"C:\Users\<YourUsername>\AppData\Local\Programs\Microsoft VS Code\bin\code.cmd"
+    vscode_path = r"C:\Users\Vinh\AppData\Local\Programs\Microsoft VS Code\bin\code.cmd"
 
     # Open VS Code in the desired folder
     try:
