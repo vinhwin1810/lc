@@ -7,7 +7,7 @@ def decode_with_triangular_pattern(message_file):
 
     # Sort the pairs based on the numbers
     pairs.sort(key=lambda x: x[0])
-
+# Modified by script
     # Initialize variables for tracking the current line and the triangular number
 # Modified by script
     triangular_number = 1
