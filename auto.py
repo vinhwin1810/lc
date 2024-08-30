@@ -2,11 +2,16 @@ import os
 import random
 import subprocess
 # Step 1: Define the folder path
+# Define the folder path
 folder_path = os.path.expanduser(r"C:\Users\Vinh\Desktop\lc")  # Use raw string literal for Windows paths
 
-# Step 2: Open VS Code in the desired folder
+# Full path to VS Code executable
+vscode_path = r"C:\Users\<YourUsername>\AppData\Local\Programs\Microsoft VS Code\bin\code.cmd"
+
+# Open VS Code in the desired folder
 try:
-    subprocess.run(["code", folder_path], check=True)
+    # Use 'cwd' to change directory and run 'code .' in that directory
+    subprocess.run([vscode_path, "."], check=True, cwd=folder_path)
     print("VS Code opened successfully.")
 except FileNotFoundError:
     print("Error: 'code' command not found. Ensure that VS Code CLI is installed and added to PATH.")
