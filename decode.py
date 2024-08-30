@@ -1,4 +1,4 @@
-def decode_with_triangular_pattern(message_file):
+# Modified by script
     # Read the file and store the number-word pairs
     with open(message_file, 'r') as file:
         lines = file.readlines()
