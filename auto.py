@@ -1,13 +1,17 @@
 import os
 import random
 import subprocess
-
 # Step 1: Define the folder path
-folder_path = os.path.expanduser("~/Desktop/lc")  # Adjust the folder path if needed
-print(folder_path)
+folder_path = os.path.expanduser(r"C:\Users\Vinh\Desktop\lc")  # Use raw string literal for Windows paths
 
 # Step 2: Open VS Code in the desired folder
-# subprocess.run(["code", folder_path])
+try:
+    subprocess.run(["code", folder_path], check=True)
+    print("VS Code opened successfully.")
+except FileNotFoundError:
+    print("Error: 'code' command not found. Ensure that VS Code CLI is installed and added to PATH.")
+except subprocess.CalledProcessError as e:
+    print(f"Error opening VS Code: {e}")
 
 # Step 3: Find a random file and modify a random line
 def modify_random_line():
