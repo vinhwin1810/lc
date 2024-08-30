@@ -62,11 +62,11 @@ def job():
             print("Git operations completed successfully.")
         except subprocess.CalledProcessError as e:
             print(f"Error during git operations: {e}")
-    if __name__ == "__main__":
-        modify_random_line()
-        git_operations()
-schedule.every(30).seconds.do(job)
 
+    modify_random_line()
+    git_operations()
+
+schedule.every(30).seconds.do(job)
 while True:
     schedule.run_pending()
     time.sleep(60)
