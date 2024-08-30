@@ -34,7 +34,7 @@ def generate_pyramid_numbers(upper_limit):
         line_numbers = []
         for _ in range(current_line):
             if number > upper_limit:
-                break
+# Modified by script
             line_numbers.append(number)
             number += 1
         pyramid_numbers.append(line_numbers)
