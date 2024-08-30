@@ -1,5 +1,5 @@
 # Modified by script
-    # Read the file and store the number-word pairs
+# Modified by script
     with open(message_file, 'r') as file:
         lines = file.readlines()
         pairs = [line.strip().split() for line in lines]
