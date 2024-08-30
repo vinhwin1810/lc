@@ -3,9 +3,8 @@ import random
 import subprocess
 import schedule
 import time
-# Step 1: Define the folder path
-# Define the folder path
 
+# Define the function that will be run every 3 hours
 def job():
     folder_path = os.path.expanduser(r"C:\Users\Vinh\Desktop\lc")  # Use raw string literal for Windows paths
 
@@ -22,53 +21,48 @@ def job():
     except subprocess.CalledProcessError as e:
         print(f"Error opening VS Code: {e}")
 
-    # Step 3: Find a random file and modify a random line
-    def modify_random_line():
-        # Get all code files in the folder (adjust the file type if needed)
-        files = []
-        for root, dirs, filenames in os.walk(folder_path):
-            for filename in filenames:
-                if filename.endswith(".py"):  # Replace with your desired file extension
-                    files.append(os.path.join(root, filename))
+    # Modify a specific file
+    specific_file_path = os.path.join(folder_path, "decode.py")  # Replace with your specific file name
+    modify_specific_file(specific_file_path)
 
-        # Select a random file
-        if files:
-            random_file = random.choice(files)
+    # Perform Git operations
+    git_operations(folder_path)
 
-            # Read the content of the file
-            with open(random_file, "r") as file:
-                lines = file.readlines()
+# Function to modify a specific file
+def modify_specific_file(file_path):
+    try:
+        # Read the content of the specific file
+        with open(file_path, "r") as file:
+            lines = file.readlines()
 
-            # Choose a random line to modify
-            if lines:
-                random_line = random.randint(0, len(lines) - 1)
-                lines[random_line] = "// Modified by script\n"  # Example modification
+        # Choose a random line to modify
+        if lines:
+            random_line = random.randint(0, len(lines) - 1)
+            lines[random_line] = "# Modified by script\n"  # Example modification
 
-                # Write the modified content back to the file
-                with open(random_file, "w") as file:
-                    file.writelines(lines)
-                print(f"Modified line {random_line + 1} in {random_file}")
-            else:
-                print(f"No content in {random_file} to modify.")
+            # Write the modified content back to the file
+            with open(file_path, "w") as file:
+                file.writelines(lines)
+            print(f"Modified line {random_line + 1} in {file_path}")
         else:
-            print("No files found to modify.")
+            print(f"No content in {file_path} to modify.")
+    except Exception as e:
+        print(f"Error modifying file {file_path}: {e}")
 
-    # Step 4: Git add, commit, and push
-    def git_operations():
-        try:
-            subprocess.run(["git", "add", "."], check=True, cwd=folder_path)
-            subprocess.run(["git", "commit", "-m", "Automated commit"], check=True, cwd=folder_path)
-            subprocess.run(["git", "push"], check=True, cwd=folder_path)
-            print("Git operations completed successfully.")
-        except subprocess.CalledProcessError as e:
-            print(f"Error during git operations: {e}")
+# Function to perform Git add, commit, and push operations
+def git_operations(folder_path):
+    try:
+        subprocess.run(["git", "add", "."], check=True, cwd=folder_path)
+        subprocess.run(["git", "commit", "-m", "Automated commit"], check=True, cwd=folder_path)
+        subprocess.run(["git", "push"], check=True, cwd=folder_path)
+        print("Git operations completed successfully.")
+    except subprocess.CalledProcessError as e:
+        print(f"Error during git operations: {e}")
 
-    modify_random_line()
-    git_operations()
+# Schedule the job to run every 3 hours
+schedule.every(1).seconds.do(job)
 
-schedule.every(30).seconds.do(job)
+# Keep the script running and executing the job as scheduled
 while True:
     schedule.run_pending()
-    time.sleep(60)
-
-
+    time.sleep(20)  # Sleep for 60 seconds before checking again

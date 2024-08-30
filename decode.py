@@ -9,7 +9,7 @@ def decode_with_triangular_pattern(message_file):
     pairs.sort(key=lambda x: x[0])
 
     # Initialize variables for tracking the current line and the triangular number
-    message_words = []
+# Modified by script
     triangular_number = 1
     line_number = 1
 
