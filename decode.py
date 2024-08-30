@@ -25,7 +25,7 @@ def decode_with_triangular_pattern(message_file):
 
 print(decode_with_triangular_pattern('C:/Users/Vinh/Desktop/lc/coding_qual_input.txt'))
 
-# Function to generate the pyramid numbers up to the triangular number 21
+# Modified by script
 def generate_pyramid_numbers(upper_limit):
     pyramid_numbers = []
     current_line = 1
