@@ -38,7 +38,7 @@ def generate_pyramid_numbers(upper_limit):
             line_numbers.append(number)
             number += 1
         pyramid_numbers.append(line_numbers)
-        current_line += 1
+# Modified by script
     return pyramid_numbers
 
 # Generating the pyramid numbers up to 21
