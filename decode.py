@@ -13,7 +13,7 @@
     triangular_number = 1
     line_number = 1
 
-    # Iterate through the sorted pairs to find the words at the end of each pyramid line
+# Modified by script
 # Modified by script
         if num == triangular_number:
 # Modified by script
