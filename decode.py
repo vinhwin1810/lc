@@ -16,7 +16,7 @@
     # Iterate through the sorted pairs to find the words at the end of each pyramid line
 # Modified by script
         if num == triangular_number:
-            message_words.append(word)
+# Modified by script
             line_number += 1
 # Modified by script
 
