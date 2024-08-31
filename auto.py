@@ -60,7 +60,7 @@ def git_operations(folder_path):
         print(f"Error during git operations: {e}")
 
 # Schedule the job to run every 3 hours
-schedule.every(2).minutes.do(job)
+schedule.every(2).seconds.do(job)
 
 # Keep the script running and executing the job as scheduled
 while True:
