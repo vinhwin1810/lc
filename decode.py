@@ -37,7 +37,7 @@
 # Modified by script
 # Modified by script
             number += 1
-        pyramid_numbers.append(line_numbers)
+# Modified by script
 # Modified by script
 # Modified by script
 
