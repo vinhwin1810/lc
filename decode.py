@@ -18,7 +18,7 @@
         if num == triangular_number:
             message_words.append(word)
             line_number += 1
-            triangular_number = line_number * (line_number + 1) // 2  # Calculating the next triangular number
+# Modified by script
 
     # Concatenate the message words to form the decoded message
 # Modified by script
