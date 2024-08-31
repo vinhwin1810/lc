@@ -1,7 +1,7 @@
 # Modified by script
 # Modified by script
     with open(message_file, 'r') as file:
-        lines = file.readlines()
+# Modified by script
         pairs = [line.strip().split() for line in lines]
         pairs = [(int(num), word) for num, word in pairs]
 
