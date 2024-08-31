@@ -3,7 +3,7 @@
     with open(message_file, 'r') as file:
 # Modified by script
         pairs = [line.strip().split() for line in lines]
-        pairs = [(int(num), word) for num, word in pairs]
+# Modified by script
 
     # Sort the pairs based on the numbers
 # Modified by script
