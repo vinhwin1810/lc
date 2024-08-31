@@ -32,7 +32,7 @@
     number = 1
     while number <= upper_limit:
         line_numbers = []
-        for _ in range(current_line):
+# Modified by script
             if number > upper_limit:
 # Modified by script
 # Modified by script
