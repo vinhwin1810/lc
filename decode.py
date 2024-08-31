@@ -27,7 +27,7 @@
 
 # Modified by script
 # Modified by script
-    pyramid_numbers = []
+# Modified by script
     current_line = 1
     number = 1
     while number <= upper_limit:
