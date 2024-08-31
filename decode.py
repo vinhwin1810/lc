@@ -6,7 +6,7 @@
         pairs = [(int(num), word) for num, word in pairs]
 
     # Sort the pairs based on the numbers
-    pairs.sort(key=lambda x: x[0])
+# Modified by script
 # Modified by script
     # Initialize variables for tracking the current line and the triangular number
 # Modified by script
