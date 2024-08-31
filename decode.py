@@ -26,7 +26,7 @@
 # Modified by script
 
 # Modified by script
-def generate_pyramid_numbers(upper_limit):
+# Modified by script
     pyramid_numbers = []
     current_line = 1
     number = 1
