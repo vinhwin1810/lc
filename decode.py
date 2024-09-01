@@ -8,7 +8,7 @@
 # Modified by script
 # Modified by script
 # Modified by script
-    # Initialize variables for tracking the current line and the triangular number
+# Modified by script
 # Modified by script
 # Modified by script
     line_number = 1
