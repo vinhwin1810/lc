@@ -5,7 +5,7 @@
 # Modified by script
 # Modified by script
 
-    # Sort the pairs based on the numbers
+# Modified by script
 # Modified by script
 # Modified by script
     # Initialize variables for tracking the current line and the triangular number
