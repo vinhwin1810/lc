@@ -31,7 +31,7 @@
     current_line = 1
 # Modified by script
 # Modified by script
-        line_numbers = []
+# Modified by script
 # Modified by script
             if number > upper_limit:
 # Modified by script
