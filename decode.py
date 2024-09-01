@@ -15,7 +15,7 @@
 # Modified by script
 # Modified by script
 # Modified by script
-        if num == triangular_number:
+# Modified by script
 # Modified by script
             line_number += 1
 # Modified by script
