@@ -2,7 +2,7 @@
 # Modified by script
     with open(message_file, 'r') as file:
 # Modified by script
-        pairs = [line.strip().split() for line in lines]
+# Modified by script
 # Modified by script
 
     # Sort the pairs based on the numbers
