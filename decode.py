@@ -1,6 +1,6 @@
 # Modified by script
 # Modified by script
-    with open(message_file, 'r') as file:
+# Modified by script
 # Modified by script
 # Modified by script
 # Modified by script
