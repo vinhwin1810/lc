@@ -33,7 +33,7 @@
 # Modified by script
 # Modified by script
 # Modified by script
-            if number > upper_limit:
+# Modified by script
 # Modified by script
 # Modified by script
 # Modified by script
