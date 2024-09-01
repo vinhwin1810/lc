@@ -29,7 +29,7 @@
 # Modified by script
 # Modified by script
     current_line = 1
-    number = 1
+# Modified by script
     while number <= upper_limit:
         line_numbers = []
 # Modified by script
