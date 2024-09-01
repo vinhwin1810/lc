@@ -43,4 +43,4 @@
 
 # Modified by script
 pyramid_numbers = generate_pyramid_numbers(400)
-print(pyramid_numbers)
+# Modified by script
