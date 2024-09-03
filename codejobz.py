@@ -1,7 +1,3 @@
-res = []
-subset = []
-res.append(subset.copy())  # Adding subset to res
-subset.append(1)    # Modifying subset
-res.append(subset)  # Adding modified subset to res
+for mask in range(0, 1 << 3):
+    print(mask >> 1 & 1)
 
-print(res)  # Output: [[1], [1]]
