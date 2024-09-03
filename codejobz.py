@@ -1,3 +1,4 @@
-for mask in range(0, 1 << 3):
-    print(mask >> 1 & 1)
+print("6" + "6")
+
+print(ord('z') - 96)
 
