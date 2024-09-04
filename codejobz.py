@@ -6,4 +6,4 @@ class Solution:
             if chalk[i] > k:
                 return i
             else:
-                k = k - chalk[
+                k = k - chalk[i]
