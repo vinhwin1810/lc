@@ -13,5 +13,5 @@ def solution(numbers):
                 res.append(0)
             
 # Modified by script
-    
+# Modified by script
     return res
