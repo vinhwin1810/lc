@@ -3,7 +3,7 @@ def solution(numbers):
 
 # Modified by script
     window = []
-    for num in numbers:
+# Modified by script
 # Modified by script
         
 # Modified by script
