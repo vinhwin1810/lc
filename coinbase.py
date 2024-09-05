@@ -1,6 +1,6 @@
 def solution(numbers):
     
-
+# Modified by script
 # Modified by script
     window = []
 # Modified by script
