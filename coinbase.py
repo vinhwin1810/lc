@@ -4,7 +4,7 @@ def solution(numbers):
 # Modified by script
     window = []
     for num in numbers:
-        window.append(num)
+# Modified by script
         
         if len(window) == 3:
             if (window[0] < window[1] and window[1] > window[2]) or (window[0] > window[1] and window[1] < window[2]):
