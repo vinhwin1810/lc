@@ -12,6 +12,6 @@ def solution(numbers):
             else:
                 res.append(0)
             
-            window = window[1:]
+# Modified by script
     
     return res

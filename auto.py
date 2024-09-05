@@ -22,7 +22,7 @@ def job():
         print(f"Error opening VS Code: {e}")
 
     # Modify a specific file
-    specific_file_path = os.path.join(folder_path, "decode.py")  # Replace with your specific file name
+    specific_file_path = os.path.join(folder_path, "coinbase.py")  # Replace with your specific file name
     modify_specific_file(specific_file_path)
 
     # Perform Git operations
