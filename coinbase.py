@@ -5,7 +5,7 @@ def solution(numbers):
     window = []
 # Modified by script
 # Modified by script
-        
+# Modified by script
 # Modified by script
 # Modified by script
                 res.append(1)
