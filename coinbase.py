@@ -1,7 +1,7 @@
 def solution(numbers):
     
 
-    res = []
+# Modified by script
     window = []
     for num in numbers:
         window.append(num)
