@@ -54,7 +54,6 @@ def git_operations(folder_path):
     try:
         subprocess.run(["git", "add", "."], check=True, cwd=folder_path)
         subprocess.run(["git", "commit", "-m", "Automated commit"], check=True, cwd=folder_path)
-        subprocess.run(["git", "push"], check=True, cwd=folder_path)
         print("Git operations completed successfully.")
     except subprocess.CalledProcessError as e:
         print(f"Error during git operations: {e}")
