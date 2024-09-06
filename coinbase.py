@@ -1,4 +1,4 @@
-def solution(numbers):
+# Modified by script
 # Modified by script
 # Modified by script
 # Modified by script
