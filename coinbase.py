@@ -14,4 +14,4 @@ def solution(numbers):
 # Modified by script
 # Modified by script
 # Modified by script
-    return res
+# Modified by script
