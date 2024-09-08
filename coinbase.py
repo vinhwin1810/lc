@@ -1,17 +1,3 @@
-# Modified by script
-# Modified by script
-# Modified by script
-# Modified by script
-# Modified by script
-# Modified by script
-# Modified by script
-# Modified by script
-# Modified by script
-# Modified by script
-# Modified by script
-# Modified by script
-# Modified by script
-# Modified by script
-# Modified by script
-# Modified by script
+res = [[]] * 10
+
 # Modified by script
