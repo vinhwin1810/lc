@@ -1,3 +1,3 @@
-res = [[]] * 10
+# Modified by script
 
 # Modified by script
