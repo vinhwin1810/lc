@@ -11,4 +11,4 @@ class Solution:
                 max_len = max(max_len, i - mp[sum_val])
             else:
                 mp[sum_val] = i
-        return max_len
+        return max_le
