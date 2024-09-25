@@ -13,30 +13,13 @@
 
 ## Solved Problems
 
-| Problem No. | Title | Difficulty | Solution | Date Solved |
-| ----------- | ----- | ---------- | -------- | ----------- |
-| 1           | Two Sum | Easy      | [Solution](./solutions/TwoSum.md) | YYYY-MM-DD |
-| 2           | Add Two Numbers | Medium | [Solution](./solutions/AddTwoNumbers.md) | YYYY-MM-DD |
-| ...         | ...   | ...        | ...      | ...         |
+| Problem No. | Title                         | Difficulty | Approach | LeetCode Link | Date Solved |
+| ----------- | ----------------------------- | ---------- | -------- | ------------- | ----------- |
+| 1           | Two Sum                       | Easy       | [Approach](#two-sum-approach) | [LeetCode](https://leetcode.com/problems/two-sum/) | YYYY-MM-DD |
+| 2           | Add Two Numbers               | Medium     | [Approach](#add-two-numbers-approach) | [LeetCode](https://leetcode.com/problems/add-two-numbers/) | YYYY-MM-DD |
+| ...         | ...                           | ...        | ...      | ...           | ...         |
 
-## To-Do
-
-| Problem No. | Title | Difficulty | Status |
-| ----------- | ----- | ---------- | ------ |
-| 1           | Median of Two Sorted Arrays | Hard | Not Started |
-| 2           | Longest Palindromic Substring | Medium | In Progress |
-| ...         | ...   | ...        | ...    |
-
-## Notes
-
-- **General Observations**:
-  - Example: Binary search techniques are crucial for optimizing performance in sorted arrays.
-
-- **Patterns to Focus On**:
-  - Sliding window
-  - Two-pointer technique
-  - Dynamic programming
-
-## Resources
-- [LeetCode Profile](https://leetcode.com/yourusername)
-- [Helpful Study Material](#)
+### Two Sum Approach
+```text
+Use a hashmap to store the difference of the target and current number as a key and the index as a value. Iterate through the array, and for each element, check if it's present in the hashmap. If it is, you've found the pair.
+  
