@@ -13,11 +13,11 @@
 
 ## Solved Problems
 
-| Problem No. | Title                         | Difficulty | Approach                                                                                           | LeetCode Link | Date Solved |
+| Problem No. | Title                         | Difficulty | Approach | LeetCode Link | Date Solved |
 | ----------- | ----------------------------- | ---------- | -------- | ------------- | ----------- |
 | 1           | Two Sum                       | Easy       | [Approach](#two-sum-approach)                                                                      | [LeetCode](https://leetcode.com/problems/two-sum/) | YYYY-MM-DD |
 | 2           | Add Two Numbers               | Medium     | [Approach](#add-two-numbers-approach) | [LeetCode](https://leetcode.com/problems/add-two-numbers/) | YYYY-MM-DD |
-| ...         | ...                           | ...        | ...      | ...           | ...         |
+| 3       | 33. Search in Rotated Sorted Array | Med        | ...      | ...           | ...         |
 
 ### Two Sum Approach
 ```text
