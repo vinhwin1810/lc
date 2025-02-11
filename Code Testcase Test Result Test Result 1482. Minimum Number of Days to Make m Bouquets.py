@@ -1,37 +1,17 @@
 class Solution:
-    def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        n = len(bloomDay)
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
 
-        if m*k > n:
-            return -1
+        #Sliding window approach
+        n = len(nums)
+        min_len = float("inf")
+        left = 0
+        cur_sum = 0
+
+        for right in range(n):
+            cur_sum += nums[right]
+            while cur_sum >= target:
+                min_len = min(min_len, right - left + 1)
+                cur_sum -= nums[left]
+                left += 1
         
-        def canMake(day):
-            flowers = 0
-            bouquets = 0
-
-            for bloom in bloomDay:
-                if bloom <= day:
-                    flowers +=1
-                    if flowers == k:
-                        bouquets +=1
-                        flowers = 0
-                        if bouquets >= m:
-                            return True  # Early exit if required bouquets are met
-                else:
-                    flowers = 0
-            
-            return bouquets >= m
-        
-
-        l = min(bloomDay)
-        r = max(bloomDay)
-
-        while l < r:
-            mid = (l+r) // 2
-
-            if canMake(mid):
-                r = mid
-            else:
-                l = mid + 1
-        
-        return l if canMake(l) else -1
+        return min_len if min_len != float("inf") else 0
