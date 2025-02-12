@@ -1,0 +1,19 @@
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        n = len(s)
+        l = 0
+        max_len = float("-inf")
+        window = ""
+        cur_char = set()
+        for r in range(n):
+            window += s[r]
+            
+            while s[r] in cur_char:
+                max_len = max(max_len, r - l)
+                window = window[l+1:]
+                cur_char.remove(s[l])
+                l += 1
+
+            cur_char.add(s[r])
+        
+        return max_len if max_len != float("-inf") else 0
