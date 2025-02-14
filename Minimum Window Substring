@@ -1,0 +1,34 @@
+class Solution:
+    def minWindow(self, s: str, t: str) -> str:
+        if not t or not s:
+            return ""
+        countT = Counter(t)
+        window = {}
+
+        have, need = 0, len(countT)
+        res, resLen = "", 0
+        l = 0
+
+        for r in range(len(s)):
+            char = s[r]
+            if char in countT:
+                window[char] = window.get(char, 0) + 1
+                if window[char] == countT[char]:
+                    have += 1
+            while have == need:
+                resLen = max(resLen, r-l+1)
+                res = s[l:r+1]
+                left_char = s[l]
+                if left_char in countT:
+                    window[left_char] -= 1
+                    if window[left_char] < countT[left_char]:
+                        have -=1
+                l +=1
+        
+        return res
+
+
+
+            
+
+        
