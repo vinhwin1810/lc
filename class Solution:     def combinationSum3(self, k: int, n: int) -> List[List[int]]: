@@ -1,3 +1,23 @@
 class Solution:
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
         
+        res = []
+        used = set()
+
+        def backtrack(start, sub, target):
+            if len(sub) == k and target == 0:
+                res.append(sub.copy())
+                return
+            
+            for i in range(start, 10):
+                if i in used:
+                    continue
+                
+                used.add(i)
+                sub.append(i)
+                backtrack(i + 1, sub, target - i)
+                sub.pop()
+                used.remove(i)
+        
+        backtrack(1, [], n)
+        return res
