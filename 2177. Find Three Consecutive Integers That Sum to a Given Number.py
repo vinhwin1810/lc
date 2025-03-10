@@ -5,3 +5,4 @@ class Solution:
         
         else:
             return [(num // 3) - 1, num // 3, (num // 3) + 1]
+            nicenciininciencneccece
