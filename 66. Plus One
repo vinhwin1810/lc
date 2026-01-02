@@ -1,1 +1,18 @@
-
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        ans = []
+        carry = 1
+        for i in range(len(digits) - 1, -1, -1):
+            d = digits[i]
+            plus_d = d + carry
+            if plus_d > 9:
+                carry = 1
+                ans.append(plus_d % 10)
+            else:
+                carry = 0
+                ans.append(plus_d)
+        if carry:
+            ans.append(carry)
+        ans.reverse()
+        return ans
+            
